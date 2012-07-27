@@ -1,0 +1,8 @@
+  package fuyou;
+
+  option java_package = "com.fuyou.pb";
+  option java_outer_classname = "SearchServicePB";
+
+service SearchService {
+  rpc Search (SearchRequest) returns (SearchResponse);
+}
