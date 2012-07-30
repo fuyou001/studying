@@ -7,7 +7,11 @@
     <groupId>com.fuyou</groupId>
     <artifactId>studying</artifactId>
     <version>1.0</version>
-
+    <properties>
+        <project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>GBK</project.reporting.outputEncoding>
+        <compile.version>1.6</compile.version>
+    </properties>
 
     <dependencies>
         <dependency>
