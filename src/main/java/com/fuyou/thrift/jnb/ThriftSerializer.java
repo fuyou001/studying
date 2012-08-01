@@ -46,18 +46,20 @@ public class ThriftSerializer {
         int len = 10;
         for (int i = 0; i < len; i++) {
             Person temp = new Person();
-            person.setEmail("fuyou00" + i + "@gmail.com");
-            person.setId(i);
-            person.setFirstName("fu" + i);
-            person.setLastName("yubao" + i);
-            list.add(person);
+            temp.setEmail("fuyou00" + i + "@gmail.com");
+            temp.setId(i);
+            temp.setFirstName("fu" + i);
+            temp.setLastName("yubao" + i);
+            System.out.println(temp);
+            list.add(temp);
         }
+        System.out.println("list :"+list);
 
         byte[] bytes1 = serialize(tProtocolFactory, list);
         List<Person> persons = deserialize(tProtocolFactory, bytes1, len);
         for (int i = 0; i < len; i++) {
-            Person p1 = list.get(0);
-            Person p2 = persons.get(0);
+            Person p1 = list.get(i);
+            Person p2 = persons.get(i);
             System.out.println("p1:" + p1);
             System.out.println("p2:" + p2);
             System.out.println(p1.equals(p2));
