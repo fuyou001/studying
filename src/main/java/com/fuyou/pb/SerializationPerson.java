@@ -22,11 +22,11 @@ public class SerializationPerson {
                                         .setType(AddressBookProtos.Person.PhoneType.HOME))
                         .build();
         System.out.println(john);
-
         byte[] personBytes = john.toByteArray();
 
-
-        AddressBookProtos.Person john2 =  AddressBookProtos.Person.parseFrom(personBytes);
+        //二种不同方式实现反序化
+        AddressBookProtos.Person john2 = AddressBookProtos.Person.getDefaultInstance().newBuilderForType().mergeFrom(personBytes).build();
+        //AddressBookProtos.Person john2 = AddressBookProtos.Person.parseFrom(personBytes);
         System.out.println("john euals john2:"+(john.equals(john2)));
         System.out.println(john2);
 
