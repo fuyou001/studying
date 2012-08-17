@@ -1,0 +1,11 @@
+*.class
+*.iws
+*.iml
+*.ipr
+.idea
+*.bak
+target
+.project
+.classpath
+.settings
+*.log
