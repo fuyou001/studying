@@ -1,4 +1,4 @@
-namespace java com.fuyou.thrift   # 注释1   定义生成代码的命名空间，与你需要定义的package相对应。
+namespace java com.fuyou.thrift.test   # 注释1   定义生成代码的命名空间，与你需要定义的package相对应。
 
 struct Blog {   #  注释2.1   定义实体名称和数据结构，类似你业务逻辑中的pojo get/set
     1: string topic     #  注释2.2  参数类型可以参见 Thrift wiki
@@ -7,6 +7,7 @@ struct Blog {   #  注释2.1   定义实体名称和数据结构，类似你业务逻辑中的pojo get/
     4: string id
     5: string ipAddress
     6: map<string,string> props
+    7: map<Object,Object> props2
   }
 
 service ThriftCase {  #  注释3    代码生成的类名，你的业务逻辑代码需要实现代码生成的ThriftCase.Iface接口

@@ -6,7 +6,11 @@
 
     <groupId>com.fuyou</groupId>
     <artifactId>studying</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+        <module>open</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>GBK</project.build.sourceEncoding>
         <project.reporting.outputEncoding>GBK</project.reporting.outputEncoding>
@@ -14,16 +18,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java</artifactId>
-            <version>2.4.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.thrift</groupId>
-            <artifactId>libthrift</artifactId>
-            <version>0.8.0</version>
-        </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
