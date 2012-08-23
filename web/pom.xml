@@ -9,6 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>caucho-snap</id>
+            <name>Caucho Snapshots</name>
+            <url>http://caucho.com/m2</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <artifactId>web</artifactId>
     <properties>
         <maven.test.skip>true</maven.test.skip>
@@ -190,6 +198,11 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.caucho</groupId>
+                <artifactId>resin-maven-plugin</artifactId>
+                <version>4.0.14</version>
             </plugin>
         </plugins>
     </build>
