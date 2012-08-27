@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,7 +19,7 @@ public class BenchmarkResultFormat {
         int totalRequests = benchmarkResult.getTotalRequests();
         int concurrencyLevel = benchmarkResult.getConcurrencyLevel();
 
-        float takes = toMs(benchmarkEscapedTime);
+        float takes = TimeUnit.MILLISECONDS.convert(benchmarkEscapedTime,TimeUnit.NANOSECONDS);//toMs(benchmarkEscapedTime);
 
         float tps = (totalRequests * 1000) / takes;
 
@@ -43,7 +44,7 @@ public class BenchmarkResultFormat {
 
         view.append(" Service Name:\t").append(serviceName);
         view.append("\r\n Concurrency Level:\t").append(concurrencyLevel);
-        view.append("\r\n Time taken for tests:\t").append(takes).append(" ms");
+        view.append("\r\n Time taken for Benchmark:\t").append(takes).append(" ms");
         view.append("\r\n Complete Requests:\t").append(totalRequests);
         view.append("\r\n Failed Requests:\t").append(
                 benchmarkResult.getFailedRequests());

@@ -16,12 +16,12 @@ public class BenchmarkTest {
         BenchmarkService benchmarkService = new BenchmarkService() {
             @Override
             public Object benchmark() throws Exception {
-                Thread.sleep(100);
+                Thread.sleep(10);
                 return null;
             }
         };
 
-        BenchmarkResult benchmarkResult = benchmarkEngine.benchmark(15, 100, 5, benchmarkService);
+        BenchmarkResult benchmarkResult = benchmarkEngine.benchmark(300, 9000, 5, benchmarkService);
         BenchmarkResultFormat benchmarkResultFormat = new BenchmarkResultFormat();
         String st =  benchmarkResultFormat.format(benchmarkResult,"test");
         System.out.println(st);

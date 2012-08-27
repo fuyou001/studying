@@ -43,6 +43,10 @@ public class BenchmarkEngine {
         warmUp(warmUpTime, benchmarkService);
         // 每个线程的测试次数
         int everyThreadCount = totalRequests / concurrencyLevel;
+        if(everyThreadCount<1){
+            throw new IllegalArgumentException("everyThreadCount less one....");
+        }
+
         CyclicBarrier threadStartBarrier = new CyclicBarrier(concurrencyLevel);// 线程同步开始任务
         CountDownLatch threadEndLatch = new CountDownLatch(concurrencyLevel);// 线程任务结束计数
         AtomicInteger failedCounter = new AtomicInteger(); // 成功次数统计
@@ -79,7 +83,7 @@ public class BenchmarkEngine {
         try {
             threadEndLatch.await();
         } catch (InterruptedException e) {
-            System.out.println(e);
+            System.err.println(e);
         }
 
         executorService.shutdown();
