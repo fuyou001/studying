@@ -1,0 +1,8 @@
+package fuyou;
+
+option java_package = "com.fuyou.rpc";
+option java_outer_classname = "wrapperPb";
+
+message wrapper {
+
+}

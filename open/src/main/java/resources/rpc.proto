@@ -1,0 +1,12 @@
+import "wrapper.proto";
+package fuyou;
+
+option java_package = "com.fuyou.rpc";
+option java_outer_classname = "RpcRequest";
+
+message request {
+  required string className = 1;
+  required string method = 2;
+  required int32 version = 3;
+  repeated  param = 4;
+}
