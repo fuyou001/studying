@@ -34,6 +34,14 @@ public class BenchmarkEngine {
         }
     }
 
+    /***
+     *
+     * @param concurrencyLevel
+     * @param totalRequests
+     * @param warmUpTime
+     * @param benchmarkService
+     * @return
+     */
     public BenchmarkResult benchmark(int concurrencyLevel, int totalRequests,
                                 long warmUpTime, BenchmarkService benchmarkService) {
 
@@ -46,10 +54,12 @@ public class BenchmarkEngine {
         if(everyThreadCount<1){
             throw new IllegalArgumentException("everyThreadCount less one....");
         }
-
+        //所有线程都到达，才开始运行
         CyclicBarrier threadStartBarrier = new CyclicBarrier(concurrencyLevel);// 线程同步开始任务
+        //计数器减到0，就开始运行
         CountDownLatch threadEndLatch = new CountDownLatch(concurrencyLevel);// 线程任务结束计数
-        AtomicInteger failedCounter = new AtomicInteger(); // 成功次数统计
+
+        AtomicInteger failedCounter = new AtomicInteger(); // 失败次数统计
 
         BenchmarkContext benchmarkContext = new BenchmarkContext();
         benchmarkContext.setBenchmarkService(benchmarkService);
@@ -58,11 +68,11 @@ public class BenchmarkEngine {
         benchmarkContext.setThreadEndLatch(threadEndLatch);
         benchmarkContext.setFailedCounter(failedCounter);
 
-        ExecutorService executorService = Executors
-                .newFixedThreadPool(concurrencyLevel);
+        ExecutorService executorService = Executors.newFixedThreadPool(concurrencyLevel);
 
         List<BenchmarkThread> benchmarkThreads = new ArrayList<BenchmarkThread>(
                 concurrencyLevel);
+
         for (int i = 0; i < concurrencyLevel; i++) {
             BenchmarkThread benchmarkThread = new BenchmarkThread(benchmarkContext,
                     everyThreadCount);
@@ -70,7 +80,7 @@ public class BenchmarkEngine {
         }
 
         for (BenchmarkThread benchmarkThread : benchmarkThreads) {
-            executorService.submit(benchmarkThread);
+             executorService.submit(benchmarkThread);
         }
 
 
