@@ -44,14 +44,13 @@ public class Producer implements Runnable {
                     }
                     return true;
                 }
-
                 @Override
                 public Boolean getResult() {
                     return true;
                 }
             });
             stopwatch.stop();
-            System.out.println("read file elapsed\t" +stopwatch.elapsedTime(TimeUnit.MILLISECONDS)+" ms");
+            System.out.println("read file elapsed\t" +stopwatch.elapsed(TimeUnit.MILLISECONDS)+" ms");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
