@@ -1,6 +1,7 @@
 package com.fuyou;
 
 import com.google.common.base.Stopwatch;
+import com.google.common.base.Strings;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.Ordering;
@@ -37,7 +38,7 @@ public class Main {
     private static String fileName = "/Users/fuyou/study/java/studying/test/src/main/resources/document.txt";
 
     public static void main(String[] args) throws Exception {
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
         parserArgs(args);
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.start();
@@ -59,11 +60,11 @@ public class Main {
         }
         fileName = StringUtils.trim(args[0]);
 
-        if (args.length > 1 && args[1] != null) {
+        if (args.length > 1 && !Strings.isNullOrEmpty(args[1])) {
             threadSize = Integer.parseInt(StringUtils.trim(args[1]));
         }
 
-        if (args.length > 2 && args[2] != null) {
+        if (args.length > 2 && !Strings.isNullOrEmpty(args[2])) {
             top = Integer.parseInt(StringUtils.trim(args[2]));
         }
         System.out.println("fileName:" + fileName + "\tthreadSize:" + threadSize + "\ttop:" + top);
