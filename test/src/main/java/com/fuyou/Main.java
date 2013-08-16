@@ -24,9 +24,9 @@ import java.util.concurrent.TimeUnit;
  * User: yubao.fyb@alibaba-inc.com Date: 13-8-12
  */
 public class Main {
-    private static int blockingQueueSize = 100000;
-    private static BlockingQueue<String> blockingQueue = new ArrayBlockingQueue<String>(blockingQueueSize);
-    private static String[] ignoreWord =
+    private static final int BLOCKINGQUEUESIZE = 100000;
+    private static BlockingQueue<String> blockingQueue = new ArrayBlockingQueue<String>(BLOCKINGQUEUESIZE);
+    private static final  String[] ignoreWord =
             new String[]{"the", "and", "i", "to", "of", "a", "in", "was", "that", "had", "he", "you", "his", "my",
                     "it", "as", "with", "her", "for", "on"};
 
@@ -37,14 +37,19 @@ public class Main {
     private static String fileName = "/Users/fuyou/study/java/studying/test/src/main/resources/document.txt";
 
     public static void main(String[] args) throws Exception {
+        Thread.sleep(5000);
         parserArgs(args);
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.start();
-        String fileName = "/Users/fuyou/study/java/studying/test/src/main/resources/document.txt";
+
         startupProducer(fileName);
-        Multiset<Word> result = statisticsWord(threadSize);
+
+        Multiset<Word> result = statisticsWord();
+
         printResult(getEntryOrdering(), top, result);
+
         stopwatch.stop();
+
         System.out.println("task elapsed time\t" + stopwatch.elapsed(TimeUnit.MILLISECONDS) + " ms");
         executor.shutdown();
     }
@@ -81,7 +86,7 @@ public class Main {
     }
 
 
-    private static Multiset<Word> statisticsWord(int threadSize) throws InterruptedException, ExecutionException {
+    private static Multiset<Word> statisticsWord() throws InterruptedException, ExecutionException {
         Set<Integer> ignoreSet = buildIntegerSet();
         CompletionService<Multiset<Word>> completionService = new ExecutorCompletionService<Multiset<Word>>(executor);
 
