@@ -13,6 +13,7 @@
         <module>J2SE</module>
         <module>web</module>
         <module>benchmark</module>
+        <module>test</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>GBK</project.build.sourceEncoding>
