@@ -44,9 +44,7 @@ public class Main {
 
         startupProducer(fileName);
 
-        Multiset<Word> result = statisticsWord();
-
-        printResult(getEntryOrdering(), top, result);
+        printResult(getEntryOrdering(), top, statisticsWord());
 
         stopwatch.stop();
 
