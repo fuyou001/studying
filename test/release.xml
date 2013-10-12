@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <assembly>
     <id></id>
-    <baseDirectory>test</baseDirectory>
+    <baseDirectory>msg</baseDirectory>
     <formats>
         <format>tar.gz</format>
     </formats>
     <fileSets>
         <fileSet>
             <includes>
-                <include>startup.sh</include>
                 <include>*.jar</include>
+                <include>bin/*</include>
             </includes>
             <excludes>
                 <exclude>**/src/**</exclude>
@@ -21,10 +21,11 @@
     <dependencySets>
         <dependencySet>
             <outputDirectory>/lib</outputDirectory>
-            <!--如果全部需要，把下面includes删除 -->
-            <includes>
-                <include>com.google.guava:guava</include>
-            </includes>
+            <!--&lt;!&ndash;如果全部需要，把下面includes删除 &ndash;&gt;-->
+            <!--<includes>-->
+            <!--<include>com.google.guava:guava</include>-->
+            <!--<include>com.fuyou.studying:test</include>-->
+            <!--</includes>-->
         </dependencySet>
     </dependencySets>
 </assembly>
