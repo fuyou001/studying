@@ -7,4 +7,4 @@ if [  -z $1 ];then
   exit 1
  fi
 fileNames=$1
-nohup java -server -cp $BASEDIR/lib/*:. notify.Main $fileNames > msg_test.log 2>&1 &
+nohup java -server -cp $BASEDIR/lib/*:. notify.Main $fileNames > $2  2>&1 &
