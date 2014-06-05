@@ -1,0 +1,734 @@
+/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java -ea -Didea.launcher.port=7534 "-Didea.launcher.bin.path=/Applications/IntelliJ IDEA 13.app/bin" -Dfile.encoding=UTF-8 -classpath "/Applications/IntelliJ IDEA 13.app/lib/idea_rt.jar:/Applications/IntelliJ IDEA 13.app/plugins/junit/lib/junit-rt.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/deploy.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/dt.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/javaws.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/jconsole.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/management-agent.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/plugin.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/sa-jdi.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/dnsns.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/localedata.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/src.zip:/Users/fuyou/study/java/studying/benchmark/target/test-classes:/Users/fuyou/study/java/studying/benchmark/target/classes:/Users/fuyou/.m2/repository/org/openjdk/jmh/jmh-core/0.4.1/jmh-core-0.4.1.jar:/Users/fuyou/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/Users/fuyou/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/Users/fuyou/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/fuyou/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/fuyou/.m2/repository/org/xerial/snappy/snappy-java/1.1.0.1/snappy-java-1.1.0.1.jar:/Users/fuyou/.m2/repository/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.jar:/Users/fuyou/.m2/repository/org/slf4j/slf4j-log4j12/1.6.6/slf4j-log4j12-1.6.6.jar:/Users/fuyou/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/fuyou/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/fuyou/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" com.intellij.rt.execution.application.AppMain com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 compress.CompressAbstractMicrobenchmark
+# Run progress: 0.00% complete, ETA 00:06:40
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 10)
+# Warmup Iteration   1: 162.177 ops/ms
+# Warmup Iteration   2: 220.324 ops/ms
+# Warmup Iteration   3: 227.447 ops/ms
+# Warmup Iteration   4: 222.445 ops/ms
+# Warmup Iteration   5: 214.201 ops/ms
+# Warmup Iteration   6: 206.805 ops/ms
+# Warmup Iteration   7: 215.140 ops/ms
+# Warmup Iteration   8: 216.679 ops/ms
+# Warmup Iteration   9: 219.178 ops/ms
+# Warmup Iteration  10: 217.756 ops/ms
+Iteration   1: 225.105 ops/ms
+Iteration   2: 223.746 ops/ms
+Iteration   3: 211.851 ops/ms
+Iteration   4: 228.702 ops/ms
+Iteration   5: 221.008 ops/ms
+Iteration   6: 213.134 ops/ms
+Iteration   7: 221.991 ops/ms
+Iteration   8: 222.595 ops/ms
+Iteration   9: 223.075 ops/ms
+Iteration  10: 219.607 ops/ms
+
+Result : 221.081 ¡À(99.9%) 7.791 ops/ms
+  Statistics: (min, avg, max) = (211.851, 221.081, 228.702), stdev = 5.153
+  Confidence interval (99.9%): [213.290, 228.872]
+
+
+# Run progress: 5.00% complete, ETA 00:06:30
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 10)
+# Warmup Iteration   1: 162.050 ops/ms
+# Warmup Iteration   2: 219.273 ops/ms
+# Warmup Iteration   3: 221.082 ops/ms
+# Warmup Iteration   4: 224.388 ops/ms
+# Warmup Iteration   5: 218.101 ops/ms
+# Warmup Iteration   6: 215.955 ops/ms
+# Warmup Iteration   7: 223.733 ops/ms
+# Warmup Iteration   8: 219.897 ops/ms
+# Warmup Iteration   9: 220.094 ops/ms
+# Warmup Iteration  10: 218.491 ops/ms
+Iteration   1: 207.813 ops/ms
+Iteration   2: 224.244 ops/ms
+Iteration   3: 224.342 ops/ms
+Iteration   4: 219.068 ops/ms
+Iteration   5: 216.642 ops/ms
+Iteration   6: 206.409 ops/ms
+Iteration   7: 216.051 ops/ms
+Iteration   8: 217.395 ops/ms
+Iteration   9: 212.067 ops/ms
+Iteration  10: 195.688 ops/ms
+
+Result : 213.972 ¡À(99.9%) 13.288 ops/ms
+  Statistics: (min, avg, max) = (195.688, 213.972, 224.342), stdev = 8.789
+  Confidence interval (99.9%): [200.684, 227.260]
+
+
+# Run progress: 10.00% complete, ETA 00:06:08
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 20)
+# Warmup Iteration   1: 101.314 ops/ms
+# Warmup Iteration   2: 138.668 ops/ms
+# Warmup Iteration   3: 138.197 ops/ms
+# Warmup Iteration   4: 139.469 ops/ms
+# Warmup Iteration   5: 135.775 ops/ms
+# Warmup Iteration   6: 135.964 ops/ms
+# Warmup Iteration   7: 140.300 ops/ms
+# Warmup Iteration   8: 140.885 ops/ms
+# Warmup Iteration   9: 135.828 ops/ms
+# Warmup Iteration  10: 129.501 ops/ms
+Iteration   1: 139.077 ops/ms
+Iteration   2: 132.797 ops/ms
+Iteration   3: 137.222 ops/ms
+Iteration   4: 141.673 ops/ms
+Iteration   5: 139.269 ops/ms
+Iteration   6: 140.925 ops/ms
+Iteration   7: 142.350 ops/ms
+Iteration   8: 142.010 ops/ms
+Iteration   9: 141.016 ops/ms
+Iteration  10: 139.983 ops/ms
+
+Result : 139.632 ¡À(99.9%) 4.332 ops/ms
+  Statistics: (min, avg, max) = (132.797, 139.632, 142.350), stdev = 2.865
+  Confidence interval (99.9%): [135.300, 143.964]
+
+
+# Run progress: 15.00% complete, ETA 00:05:48
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 20)
+# Warmup Iteration   1: 107.273 ops/ms
+# Warmup Iteration   2: 143.201 ops/ms
+# Warmup Iteration   3: 142.855 ops/ms
+# Warmup Iteration   4: 143.532 ops/ms
+# Warmup Iteration   5: 143.077 ops/ms
+# Warmup Iteration   6: 141.869 ops/ms
+# Warmup Iteration   7: 127.708 ops/ms
+# Warmup Iteration   8: 143.933 ops/ms
+# Warmup Iteration   9: 143.320 ops/ms
+# Warmup Iteration  10: 142.934 ops/ms
+Iteration   1: 143.931 ops/ms
+Iteration   2: 143.918 ops/ms
+Iteration   3: 140.504 ops/ms
+Iteration   4: 139.504 ops/ms
+Iteration   5: 138.587 ops/ms
+Iteration   6: 143.195 ops/ms
+Iteration   7: 144.093 ops/ms
+Iteration   8: 142.602 ops/ms
+Iteration   9: 140.586 ops/ms
+Iteration  10: 139.796 ops/ms
+
+Result : 141.672 ¡À(99.9%) 3.166 ops/ms
+  Statistics: (min, avg, max) = (138.587, 141.672, 144.093), stdev = 2.094
+  Confidence interval (99.9%): [138.505, 144.838]
+
+
+# Run progress: 20.00% complete, ETA 00:05:27
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 30)
+# Warmup Iteration   1: 79.156 ops/ms
+# Warmup Iteration   2: 102.295 ops/ms
+# Warmup Iteration   3: 98.958 ops/ms
+# Warmup Iteration   4: 104.291 ops/ms
+# Warmup Iteration   5: 95.795 ops/ms
+# Warmup Iteration   6: 102.242 ops/ms
+# Warmup Iteration   7: 103.099 ops/ms
+# Warmup Iteration   8: 104.006 ops/ms
+# Warmup Iteration   9: 95.683 ops/ms
+# Warmup Iteration  10: 101.619 ops/ms
+Iteration   1: 103.485 ops/ms
+Iteration   2: 103.610 ops/ms
+Iteration   3: 104.739 ops/ms
+Iteration   4: 104.303 ops/ms
+Iteration   5: 105.069 ops/ms
+Iteration   6: 103.045 ops/ms
+Iteration   7: 104.609 ops/ms
+Iteration   8: 104.033 ops/ms
+Iteration   9: 104.725 ops/ms
+Iteration  10: 105.262 ops/ms
+
+Result : 104.288 ¡À(99.9%) 1.101 ops/ms
+  Statistics: (min, avg, max) = (103.045, 104.288, 105.262), stdev = 0.728
+  Confidence interval (99.9%): [103.187, 105.389]
+
+
+# Run progress: 25.00% complete, ETA 00:05:06
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 30)
+# Warmup Iteration   1: 77.177 ops/ms
+# Warmup Iteration   2: 102.254 ops/ms
+# Warmup Iteration   3: 101.442 ops/ms
+# Warmup Iteration   4: 102.973 ops/ms
+# Warmup Iteration   5: 102.750 ops/ms
+# Warmup Iteration   6: 102.650 ops/ms
+# Warmup Iteration   7: 104.591 ops/ms
+# Warmup Iteration   8: 103.787 ops/ms
+# Warmup Iteration   9: 103.983 ops/ms
+# Warmup Iteration  10: 103.547 ops/ms
+Iteration   1: 104.629 ops/ms
+Iteration   2: 103.768 ops/ms
+Iteration   3: 103.795 ops/ms
+Iteration   4: 103.685 ops/ms
+Iteration   5: 104.007 ops/ms
+Iteration   6: 103.732 ops/ms
+Iteration   7: 105.994 ops/ms
+Iteration   8: 104.476 ops/ms
+Iteration   9: 104.660 ops/ms
+Iteration  10: 105.483 ops/ms
+
+Result : 104.423 ¡À(99.9%) 1.205 ops/ms
+  Statistics: (min, avg, max) = (103.685, 104.423, 105.994), stdev = 0.797
+  Confidence interval (99.9%): [103.218, 105.627]
+
+
+# Run progress: 30.00% complete, ETA 00:04:46
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 40)
+# Warmup Iteration   1: 66.071 ops/ms
+# Warmup Iteration   2: 85.958 ops/ms
+# Warmup Iteration   3: 87.346 ops/ms
+# Warmup Iteration   4: 86.696 ops/ms
+# Warmup Iteration   5: 85.148 ops/ms
+# Warmup Iteration   6: 85.058 ops/ms
+# Warmup Iteration   7: 85.703 ops/ms
+# Warmup Iteration   8: 85.783 ops/ms
+# Warmup Iteration   9: 86.094 ops/ms
+# Warmup Iteration  10: 85.285 ops/ms
+Iteration   1: 85.484 ops/ms
+Iteration   2: 85.802 ops/ms
+Iteration   3: 85.759 ops/ms
+Iteration   4: 85.241 ops/ms
+Iteration   5: 86.156 ops/ms
+Iteration   6: 85.184 ops/ms
+Iteration   7: 86.843 ops/ms
+Iteration   8: 87.381 ops/ms
+Iteration   9: 87.423 ops/ms
+Iteration  10: 86.349 ops/ms
+
+Result : 86.162 ¡À(99.9%) 1.248 ops/ms
+  Statistics: (min, avg, max) = (85.184, 86.162, 87.423), stdev = 0.825
+  Confidence interval (99.9%): [84.914, 87.410]
+
+
+# Run progress: 35.00% complete, ETA 00:04:25
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 40)
+# Warmup Iteration   1: 67.176 ops/ms
+# Warmup Iteration   2: 86.253 ops/ms
+# Warmup Iteration   3: 87.728 ops/ms
+# Warmup Iteration   4: 86.168 ops/ms
+# Warmup Iteration   5: 86.703 ops/ms
+# Warmup Iteration   6: 86.042 ops/ms
+# Warmup Iteration   7: 86.283 ops/ms
+# Warmup Iteration   8: 86.142 ops/ms
+# Warmup Iteration   9: 87.057 ops/ms
+# Warmup Iteration  10: 86.964 ops/ms
+Iteration   1: 86.057 ops/ms
+Iteration   2: 86.833 ops/ms
+Iteration   3: 85.776 ops/ms
+Iteration   4: 85.141 ops/ms
+Iteration   5: 86.394 ops/ms
+Iteration   6: 86.309 ops/ms
+Iteration   7: 87.224 ops/ms
+Iteration   8: 87.037 ops/ms
+Iteration   9: 87.456 ops/ms
+Iteration  10: 86.796 ops/ms
+
+Result : 86.502 ¡À(99.9%) 1.074 ops/ms
+  Statistics: (min, avg, max) = (85.141, 86.502, 87.456), stdev = 0.710
+  Confidence interval (99.9%): [85.429, 87.576]
+
+
+# Run progress: 40.00% complete, ETA 00:04:05
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 80)
+# Warmup Iteration   1: 34.955 ops/ms
+# Warmup Iteration   2: 46.426 ops/ms
+# Warmup Iteration   3: 47.079 ops/ms
+# Warmup Iteration   4: 46.907 ops/ms
+# Warmup Iteration   5: 46.307 ops/ms
+# Warmup Iteration   6: 47.068 ops/ms
+# Warmup Iteration   7: 47.145 ops/ms
+# Warmup Iteration   8: 46.424 ops/ms
+# Warmup Iteration   9: 46.907 ops/ms
+# Warmup Iteration  10: 46.731 ops/ms
+Iteration   1: 47.262 ops/ms
+Iteration   2: 46.496 ops/ms
+Iteration   3: 46.539 ops/ms
+Iteration   4: 46.442 ops/ms
+Iteration   5: 47.080 ops/ms
+Iteration   6: 47.172 ops/ms
+Iteration   7: 46.808 ops/ms
+Iteration   8: 46.937 ops/ms
+Iteration   9: 46.617 ops/ms
+Iteration  10: 47.056 ops/ms
+
+Result : 46.841 ¡À(99.9%) 0.456 ops/ms
+  Statistics: (min, avg, max) = (46.442, 46.841, 47.262), stdev = 0.302
+  Confidence interval (99.9%): [46.385, 47.297]
+
+
+# Run progress: 45.00% complete, ETA 00:03:44
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.SnappyCompress
+# Parameters: (size = 80)
+# Warmup Iteration   1: 35.126 ops/ms
+# Warmup Iteration   2: 45.924 ops/ms
+# Warmup Iteration   3: 46.775 ops/ms
+# Warmup Iteration   4: 47.001 ops/ms
+# Warmup Iteration   5: 46.111 ops/ms
+# Warmup Iteration   6: 46.895 ops/ms
+# Warmup Iteration   7: 46.775 ops/ms
+# Warmup Iteration   8: 47.033 ops/ms
+# Warmup Iteration   9: 46.099 ops/ms
+# Warmup Iteration  10: 46.797 ops/ms
+Iteration   1: 46.756 ops/ms
+Iteration   2: 46.850 ops/ms
+Iteration   3: 46.931 ops/ms
+Iteration   4: 46.686 ops/ms
+Iteration   5: 46.896 ops/ms
+Iteration   6: 46.735 ops/ms
+Iteration   7: 47.006 ops/ms
+Iteration   8: 46.565 ops/ms
+Iteration   9: 47.059 ops/ms
+Iteration  10: 47.000 ops/ms
+
+Result : 46.848 ¡À(99.9%) 0.241 ops/ms
+  Statistics: (min, avg, max) = (46.565, 46.848, 47.059), stdev = 0.160
+  Confidence interval (99.9%): [46.607, 47.090]
+
+
+# Run progress: 50.00% complete, ETA 00:03:24
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 10)
+# Warmup Iteration   1: 26.641 ops/ms
+# Warmup Iteration   2: 37.118 ops/ms
+# Warmup Iteration   3: 37.858 ops/ms
+# Warmup Iteration   4: 37.623 ops/ms
+# Warmup Iteration   5: 36.662 ops/ms
+# Warmup Iteration   6: 37.077 ops/ms
+# Warmup Iteration   7: 37.359 ops/ms
+# Warmup Iteration   8: 37.489 ops/ms
+# Warmup Iteration   9: 36.367 ops/ms
+# Warmup Iteration  10: 36.436 ops/ms
+Iteration   1: 36.829 ops/ms
+Iteration   2: 37.241 ops/ms
+Iteration   3: 36.951 ops/ms
+Iteration   4: 36.550 ops/ms
+Iteration   5: 36.438 ops/ms
+Iteration   6: 37.176 ops/ms
+Iteration   7: 37.128 ops/ms
+Iteration   8: 36.100 ops/ms
+Iteration   9: 37.078 ops/ms
+Iteration  10: 36.991 ops/ms
+
+Result : 36.848 ¡À(99.9%) 0.562 ops/ms
+  Statistics: (min, avg, max) = (36.100, 36.848, 37.241), stdev = 0.372
+  Confidence interval (99.9%): [36.286, 37.410]
+
+
+# Run progress: 55.00% complete, ETA 00:03:03
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 10)
+# Warmup Iteration   1: 26.683 ops/ms
+# Warmup Iteration   2: 37.253 ops/ms
+# Warmup Iteration   3: 37.783 ops/ms
+# Warmup Iteration   4: 37.448 ops/ms
+# Warmup Iteration   5: 37.376 ops/ms
+# Warmup Iteration   6: 33.799 ops/ms
+# Warmup Iteration   7: 36.064 ops/ms
+# Warmup Iteration   8: 36.937 ops/ms
+# Warmup Iteration   9: 37.182 ops/ms
+# Warmup Iteration  10: 37.496 ops/ms
+Iteration   1: 34.672 ops/ms
+Iteration   2: 36.283 ops/ms
+Iteration   3: 37.259 ops/ms
+Iteration   4: 36.667 ops/ms
+Iteration   5: 37.545 ops/ms
+Iteration   6: 37.590 ops/ms
+Iteration   7: 36.811 ops/ms
+Iteration   8: 36.857 ops/ms
+Iteration   9: 37.077 ops/ms
+Iteration  10: 37.168 ops/ms
+
+Result : 36.793 ¡À(99.9%) 1.277 ops/ms
+  Statistics: (min, avg, max) = (34.672, 36.793, 37.590), stdev = 0.845
+  Confidence interval (99.9%): [35.516, 38.070]
+
+
+# Run progress: 60.00% complete, ETA 00:02:43
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 20)
+# Warmup Iteration   1: 20.668 ops/ms
+# Warmup Iteration   2: 28.919 ops/ms
+# Warmup Iteration   3: 29.977 ops/ms
+# Warmup Iteration   4: 29.580 ops/ms
+# Warmup Iteration   5: 29.083 ops/ms
+# Warmup Iteration   6: 29.665 ops/ms
+# Warmup Iteration   7: 29.747 ops/ms
+# Warmup Iteration   8: 29.972 ops/ms
+# Warmup Iteration   9: 29.675 ops/ms
+# Warmup Iteration  10: 29.366 ops/ms
+Iteration   1: 29.870 ops/ms
+Iteration   2: 28.954 ops/ms
+Iteration   3: 30.034 ops/ms
+Iteration   4: 29.155 ops/ms
+Iteration   5: 29.637 ops/ms
+Iteration   6: 29.896 ops/ms
+Iteration   7: 29.660 ops/ms
+Iteration   8: 30.036 ops/ms
+Iteration   9: 29.831 ops/ms
+Iteration  10: 29.925 ops/ms
+
+Result : 29.700 ¡À(99.9%) 0.556 ops/ms
+  Statistics: (min, avg, max) = (28.954, 29.700, 30.036), stdev = 0.368
+  Confidence interval (99.9%): [29.144, 30.256]
+
+
+# Run progress: 65.00% complete, ETA 00:02:23
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 20)
+# Warmup Iteration   1: 21.399 ops/ms
+# Warmup Iteration   2: 29.927 ops/ms
+# Warmup Iteration   3: 30.112 ops/ms
+# Warmup Iteration   4: 30.298 ops/ms
+# Warmup Iteration   5: 27.721 ops/ms
+# Warmup Iteration   6: 30.104 ops/ms
+# Warmup Iteration   7: 30.214 ops/ms
+# Warmup Iteration   8: 30.058 ops/ms
+# Warmup Iteration   9: 30.289 ops/ms
+# Warmup Iteration  10: 30.076 ops/ms
+Iteration   1: 30.094 ops/ms
+Iteration   2: 30.112 ops/ms
+Iteration   3: 29.988 ops/ms
+Iteration   4: 29.719 ops/ms
+Iteration   5: 29.839 ops/ms
+Iteration   6: 30.097 ops/ms
+Iteration   7: 30.189 ops/ms
+Iteration   8: 29.881 ops/ms
+Iteration   9: 29.864 ops/ms
+Iteration  10: 30.033 ops/ms
+
+Result : 29.982 ¡À(99.9%) 0.226 ops/ms
+  Statistics: (min, avg, max) = (29.719, 29.982, 30.189), stdev = 0.150
+  Confidence interval (99.9%): [29.755, 30.208]
+
+
+# Run progress: 70.00% complete, ETA 00:02:02
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 30)
+# Warmup Iteration   1: 19.162 ops/ms
+# Warmup Iteration   2: 26.028 ops/ms
+# Warmup Iteration   3: 26.365 ops/ms
+# Warmup Iteration   4: 25.993 ops/ms
+# Warmup Iteration   5: 25.923 ops/ms
+# Warmup Iteration   6: 25.367 ops/ms
+# Warmup Iteration   7: 25.777 ops/ms
+# Warmup Iteration   8: 25.974 ops/ms
+# Warmup Iteration   9: 25.801 ops/ms
+# Warmup Iteration  10: 25.843 ops/ms
+Iteration   1: 25.996 ops/ms
+Iteration   2: 25.744 ops/ms
+Iteration   3: 25.747 ops/ms
+Iteration   4: 25.501 ops/ms
+Iteration   5: 25.985 ops/ms
+Iteration   6: 25.949 ops/ms
+Iteration   7: 25.688 ops/ms
+Iteration   8: 26.094 ops/ms
+Iteration   9: 25.406 ops/ms
+Iteration  10: 25.705 ops/ms
+
+Result : 25.782 ¡À(99.9%) 0.338 ops/ms
+  Statistics: (min, avg, max) = (25.406, 25.782, 26.094), stdev = 0.223
+  Confidence interval (99.9%): [25.444, 26.119]
+
+
+# Run progress: 75.00% complete, ETA 00:01:42
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 30)
+# Warmup Iteration   1: 19.332 ops/ms
+# Warmup Iteration   2: 26.159 ops/ms
+# Warmup Iteration   3: 24.860 ops/ms
+# Warmup Iteration   4: 24.307 ops/ms
+# Warmup Iteration   5: 23.994 ops/ms
+# Warmup Iteration   6: 25.109 ops/ms
+# Warmup Iteration   7: 25.036 ops/ms
+# Warmup Iteration   8: 24.579 ops/ms
+# Warmup Iteration   9: 24.691 ops/ms
+# Warmup Iteration  10: 24.543 ops/ms
+Iteration   1: 25.337 ops/ms
+Iteration   2: 25.234 ops/ms
+Iteration   3: 25.101 ops/ms
+Iteration   4: 25.335 ops/ms
+Iteration   5: 25.353 ops/ms
+Iteration   6: 25.025 ops/ms
+Iteration   7: 25.207 ops/ms
+Iteration   8: 25.118 ops/ms
+Iteration   9: 25.360 ops/ms
+Iteration  10: 25.398 ops/ms
+
+Result : 25.247 ¡À(99.9%) 0.196 ops/ms
+  Statistics: (min, avg, max) = (25.025, 25.247, 25.398), stdev = 0.130
+  Confidence interval (99.9%): [25.050, 25.443]
+
+
+# Run progress: 80.00% complete, ETA 00:01:21
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 40)
+# Warmup Iteration   1: 16.557 ops/ms
+# Warmup Iteration   2: 22.586 ops/ms
+# Warmup Iteration   3: 22.216 ops/ms
+# Warmup Iteration   4: 22.171 ops/ms
+# Warmup Iteration   5: 22.071 ops/ms
+# Warmup Iteration   6: 22.123 ops/ms
+# Warmup Iteration   7: 22.071 ops/ms
+# Warmup Iteration   8: 22.391 ops/ms
+# Warmup Iteration   9: 22.357 ops/ms
+# Warmup Iteration  10: 22.537 ops/ms
+Iteration   1: 22.477 ops/ms
+Iteration   2: 22.393 ops/ms
+Iteration   3: 21.761 ops/ms
+Iteration   4: 22.766 ops/ms
+Iteration   5: 22.601 ops/ms
+Iteration   6: 22.954 ops/ms
+Iteration   7: 22.545 ops/ms
+Iteration   8: 22.580 ops/ms
+Iteration   9: 22.577 ops/ms
+Iteration  10: 22.496 ops/ms
+
+Result : 22.515 ¡À(99.9%) 0.467 ops/ms
+  Statistics: (min, avg, max) = (21.761, 22.515, 22.954), stdev = 0.309
+  Confidence interval (99.9%): [22.048, 22.982]
+
+
+# Run progress: 85.00% complete, ETA 00:01:01
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 40)
+# Warmup Iteration   1: 17.108 ops/ms
+# Warmup Iteration   2: 22.557 ops/ms
+# Warmup Iteration   3: 22.308 ops/ms
+# Warmup Iteration   4: 22.503 ops/ms
+# Warmup Iteration   5: 22.086 ops/ms
+# Warmup Iteration   6: 22.286 ops/ms
+# Warmup Iteration   7: 22.678 ops/ms
+# Warmup Iteration   8: 22.531 ops/ms
+# Warmup Iteration   9: 22.539 ops/ms
+# Warmup Iteration  10: 22.349 ops/ms
+Iteration   1: 22.514 ops/ms
+Iteration   2: 22.231 ops/ms
+Iteration   3: 22.547 ops/ms
+Iteration   4: 22.055 ops/ms
+Iteration   5: 21.607 ops/ms
+Iteration   6: 22.726 ops/ms
+Iteration   7: 22.692 ops/ms
+Iteration   8: 22.813 ops/ms
+Iteration   9: 22.126 ops/ms
+Iteration  10: 21.862 ops/ms
+
+Result : 22.317 ¡À(99.9%) 0.611 ops/ms
+  Statistics: (min, avg, max) = (21.607, 22.317, 22.813), stdev = 0.404
+  Confidence interval (99.9%): [21.706, 22.928]
+
+
+# Run progress: 90.00% complete, ETA 00:00:40
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 1 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 80)
+# Warmup Iteration   1: 10.323 ops/ms
+# Warmup Iteration   2: 14.805 ops/ms
+# Warmup Iteration   3: 14.837 ops/ms
+# Warmup Iteration   4: 14.836 ops/ms
+# Warmup Iteration   5: 14.720 ops/ms
+# Warmup Iteration   6: 14.773 ops/ms
+# Warmup Iteration   7: 14.910 ops/ms
+# Warmup Iteration   8: 14.769 ops/ms
+# Warmup Iteration   9: 14.852 ops/ms
+# Warmup Iteration  10: 15.059 ops/ms
+Iteration   1: 14.983 ops/ms
+Iteration   2: 15.044 ops/ms
+Iteration   3: 14.913 ops/ms
+Iteration   4: 14.808 ops/ms
+Iteration   5: 15.026 ops/ms
+Iteration   6: 14.973 ops/ms
+Iteration   7: 14.821 ops/ms
+Iteration   8: 14.905 ops/ms
+Iteration   9: 14.932 ops/ms
+Iteration  10: 14.322 ops/ms
+
+Result : 14.873 ¡À(99.9%) 0.315 ops/ms
+  Statistics: (min, avg, max) = (14.322, 14.873, 15.044), stdev = 0.208
+  Confidence interval (99.9%): [14.557, 15.188]
+
+
+# Run progress: 95.00% complete, ETA 00:00:20
+# VM invoker: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java
+# VM options: -server -dsa -da -ea:io.netty... -Xms768m -Xmx768m -XX:MaxDirectMemorySize=768m -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:+UseFastAccessorMethods -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:+HeapDumpOnOutOfMemoryError -Dio.netty.noResourceLeakDetection
+# Fork: 2 of 2
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: compress.CompressAbstractMicrobenchmark.ZlibCompress
+# Parameters: (size = 80)
+# Warmup Iteration   1: 10.473 ops/ms
+# Warmup Iteration   2: 14.675 ops/ms
+# Warmup Iteration   3: 14.553 ops/ms
+# Warmup Iteration   4: 14.689 ops/ms
+# Warmup Iteration   5: 14.213 ops/ms
+# Warmup Iteration   6: 14.852 ops/ms
+# Warmup Iteration   7: 14.494 ops/ms
+# Warmup Iteration   8: 14.331 ops/ms
+# Warmup Iteration   9: 14.822 ops/ms
+# Warmup Iteration  10: 14.869 ops/ms
+Iteration   1: 14.935 ops/ms
+Iteration   2: 14.849 ops/ms
+Iteration   3: 14.573 ops/ms
+Iteration   4: 14.552 ops/ms
+Iteration   5: 15.071 ops/ms
+Iteration   6: 14.914 ops/ms
+Iteration   7: 15.042 ops/ms
+Iteration   8: 15.120 ops/ms
+Iteration   9: 14.974 ops/ms
+Iteration  10: 15.161 ops/ms
+
+Result : 14.919 ¡À(99.9%) 0.319 ops/ms
+  Statistics: (min, avg, max) = (14.552, 14.919, 15.161), stdev = 0.211
+  Confidence interval (99.9%): [14.601, 15.238]
+
+
+Benchmark                                         (size)   Mode   Samples         Mean   Mean error    Units
+c.CompressAbstractMicrobenchmark.SnappyCompress       10  thrpt        20      217.527        6.863   ops/ms
+c.CompressAbstractMicrobenchmark.SnappyCompress       20  thrpt        20      140.652        2.307   ops/ms
+c.CompressAbstractMicrobenchmark.SnappyCompress       30  thrpt        20      104.355        0.648   ops/ms
+c.CompressAbstractMicrobenchmark.SnappyCompress       40  thrpt        20       86.332        0.668   ops/ms
+c.CompressAbstractMicrobenchmark.SnappyCompress       80  thrpt        20       46.845        0.204   ops/ms
+c.CompressAbstractMicrobenchmark.ZlibCompress         10  thrpt        20       36.820        0.552   ops/ms
+c.CompressAbstractMicrobenchmark.ZlibCompress         20  thrpt        20       29.841        0.269   ops/ms
+c.CompressAbstractMicrobenchmark.ZlibCompress         30  thrpt        20       25.514        0.284   ops/ms
+c.CompressAbstractMicrobenchmark.ZlibCompress         40  thrpt        20       22.416        0.316   ops/ms
+c.CompressAbstractMicrobenchmark.ZlibCompress         80  thrpt        20       14.896        0.178   ops/ms
+
+Process finished with exit code 0
