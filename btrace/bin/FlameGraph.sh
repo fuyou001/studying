@@ -14,6 +14,6 @@ for x in $(seq 1 $nsamples)
   done | \
 awk 'BEGIN { s = "" } \
 /^"/ { if (s) print s; s = "" } \
-/^	at / { sub(/\([^)]*\)?$/, "", $2); sub(/^java/, "j", $2); if (s) s = s "," $2; else s = $2 } \
+/^	at / { sub(/\([^)]*\)?$/, "", $2); sub(/^java/, "j", $2); if (s) s = s ";" $2; else s = $2 } \
 END { if(s) print s }' | \
 sort | uniq -c | sort -rnk1 | awk '{print $2 "  " $1}'  > java_proflie_`date +%Y%m%d%H`.tcb
