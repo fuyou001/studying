@@ -71,7 +71,7 @@ public class AsyncLoadTracer {
     }
 
     @OnEvent
-    public static void onEvent() {                 `
+    public static void onEvent() {
         BTraceUtils.truncateAggregation(histogram, 10);
         println("---------------------------------------------");
         printAggregation("Count", count);
