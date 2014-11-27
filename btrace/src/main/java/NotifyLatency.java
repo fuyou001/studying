@@ -30,8 +30,8 @@ public class NotifyLatency {
             clazz = "/com.taobao\\.notify\\.server\\.kernel\\.handler\\..*/",
             method = "/.*/",
             location = @Location(Kind.RETURN))
-    public static void onMethodReturn(@ProbeMethodName String method, @Duration long duration) {
-        AggregationKey key = newAggregationKey(method);
+    public static void onMethodReturn(@ProbeClassName String pcm,@ProbeMethodName String method, @Duration long duration) {
+        AggregationKey key = newAggregationKey(Strings.strcat(pcm, Strings.strcat("#", method)));
         addToAggregation(histogram, key, duration);
         addToAggregation(average, key, duration);
         addToAggregation(max, key, duration);
